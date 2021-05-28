@@ -14,15 +14,21 @@ else
 {
   <h4>Engineers licensed to repair this machine:</h4>
   <ul>
-  @foreach (var join in Model.JoinEntities)
+  @foreach(var join in Model.Engineers)
+  {
+    <li>@join.Engineer.Name</li>
+    @using (Html.BeginForm("DeleteEngineer", "Machines"))
     {
-      <li>@join.Engineer.Name</li>
+      @Html.Hidden("joinId", @join.EngineerMachineId)
+      <input type="submit" value="Delete" class="btn btn-outline-danger" />
     }
+  }
   </ul>
 }
 
 <div class="flex">
 @Html.ActionLink("Edit Machine", "Edit", "Machines", new {id = Model.MachineId}, new { @class = "btn btn-outline-dark" })
 @Html.ActionLink("Delete Machine", "Delete", "Machines", new {id = Model.MachineId}, new { @class = "btn btn-outline-dark"})
+@Html.ActionLink("Add an Engineer", "AddEngineer", new { id = Model.MachineId }, new { @class = "btn btn-outline-dark" })
 @Html.ActionLink("View all Machines", "Index", "Machines", null, new { @class = "btn btn-outline-dark" })
 </div>
