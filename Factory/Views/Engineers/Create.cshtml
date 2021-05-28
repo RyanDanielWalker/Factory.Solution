@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<h4>Add a new Engineer</h4>
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name, new {required = "required"})
+  <input type="submit" value="Add New Engineer" class="btn btn-outline-success" />
+}
+<div class="flex">
+  @Html.ActionLink("Show all Engineers", "Index", "Engineers", null, new { @class = "btn btn-outline-dark"})
+  @Html.ActionLink("Home", "Index", "Home", null, new {@class = "btn btn-outline-dark"})
+</div>
