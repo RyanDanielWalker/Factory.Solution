@@ -4,7 +4,7 @@
 
 @model Factory.Models.Machine
 
-<h4>Add a new Machine</h4>
+<h4><span class="underLine">Add A New Machine</span></h4>
 
 @using (Html.BeginForm())
 {
@@ -12,11 +12,11 @@
   @Html.TextBoxFor(model => model.Name, new {required = "required"})
 
   @Html.Label("Select Engineer")
-  @Html.DropDownList("EngineerId")
+  @Html.DropDownList("EngineerId", "-select-")
 
   <input type="submit" value="Add New Machine" class="btn btn-outline-success" />
 }
 <div class="flex">
-  @Html.ActionLink("Show all items", "Index", "Machines", null, new {@class = "btn btn-outline-dark"})
+  @Html.ActionLink("Show All Machines", "Index", "Machines", null, new {@class = "btn btn-outline-dark"})
   @Html.ActionLink("Home", "Index", "Home", null, new {@class = "btn btn-outline-dark"})
 </div>
