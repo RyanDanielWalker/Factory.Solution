@@ -10,7 +10,8 @@
   @Html.LabelFor(model => model.Name)
   @Html.TextBoxFor(model => model.Name, new { required = "required" })
   @Html.Label("License Renewal Date")
-  @Html.EditorFor(model => model.LicenseDate, new {@class = "form-control datepicker"})
+  @Html.TextBoxFor(model => model.LicenseDate, new { @type="date", @class = "form-control datepicker" } )
+
 
 
   <input type="submit" value="Add New Engineer" class="btn btn-outline-success" />

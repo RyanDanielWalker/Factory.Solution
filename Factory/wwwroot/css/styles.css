@@ -15,7 +15,7 @@ body {
 h1, .underLine {
   text-decoration: underline;
 }
-input {
+input, .datepicker {
   margin: auto;
   width: 65%;
   display: block;
@@ -60,4 +60,5 @@ ul {
   color: green;
   text-decoration: dashed;
 }
+
 
