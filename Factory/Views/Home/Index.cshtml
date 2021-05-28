@@ -1,0 +1,10 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>Welcome, Dr. Sillystringz!</h1>
+<h3>What would you like to do?</h3>
+<div class="flex">
+  @Html.ActionLink("See all Engineers", "Index", "Engineers", null, new { @class = "btn btn-outline-dark"})
+  @Html.ActionLink("See all Machines", "Index", "Machines", null, new { @class = "btn btn-outline-dark"})
+</div>
