@@ -1,0 +1,29 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer;
+
+<h2>Details for @Html.DisplayFor(model => model.Name)</h2>
+
+@if (@Model.JoinEntities.Count == 0)
+{
+  <p>This engineer is not licensed to repair any machines</p>
+}
+else
+{
+  <h4>Machines this engineer is licensed to repair:</h4>
+  <ul>
+  @foreach (var join in Model.JoinEntities)
+    {
+      <li>@join.Machine.Name</li>
+    }
+  </ul>
+}
+
+<div class="flex">
+  @Html.ActionLink("Edit Engineer", "Edit", "Engineers", new { id =Model.EngineerId }, new { @class = "btn btn-outline-dark"})
+  @Html.ActionLink("Delete Engineer", "Delete", "Engineers", new { id =Model.EngineerId }, new { @class = "btn btn-outline-dark"})
+  @Html.ActionLink("View all Engineers", "Index", "Engineers", null, new { @class = "btn btn-outline-dark"})
+  @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-outline-dark"})
+</div>
