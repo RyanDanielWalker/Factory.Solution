@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<h2>Add a licensed engineer able to repair @Html.DisplayFor(model => model.Description)</h2>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.MachineId)
+
+  @Html.Label("Select Engineer")
+  @Html.DropDownList("EngineerId")
+
+  <input type="submit" value="Save" class="btn btn-outline-primary" />
+}
+
+@Html.ActionLink("Back to Machines", "Index", "Machines", null, new { @class = "btn btn-outline-dark"})
