@@ -51,4 +51,12 @@ ul {
   display: block;
   font-size: small;
 }
+.noGood{
+  color: red;
+  text-decoration: dashed;
+}
+.yesGood{
+  color: green;
+  text-decoration: dashed;
+}
 

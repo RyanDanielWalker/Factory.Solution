@@ -12,6 +12,8 @@
 
   @Html.LabelFor(model => model.Name)
   @Html.EditorFor(model => model.Name)
+  @Html.LabelFor(model => model.Operational)
+  @Html.CheckBoxFor(model => model.Operational)
 
   @Html.Label("Select Engineer")
   @Html.DropDownList("EngineerId")

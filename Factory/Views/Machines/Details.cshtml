@@ -6,6 +6,14 @@
 
 <h2><span class="underLine">Details for @Html.DisplayFor(model => model.Name)</span></h2>
 
+@if (@Model.Operational == true)
+{
+  <h5 class="yesGood">This Machine is currently operational</h5>
+}
+else
+{
+  <h5 class="noGood">This Machine is not currently operational</h5>
+}
 @if (@Model.JoinEntities.Count == 0)
 {
   <p>There are no engineers licensed to repair this machine</p>
