@@ -1,0 +1,25 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<h2>Edit @Html.DisplayFor(model => model.Name)</h2>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.MachineId)
+
+  @Html.LabelFor(model => model.Name)
+  @Html.EditorFor(model => model.Name)
+
+  @Html.Label("Select Engineer")
+  @Html.DropDownList("EngineerId")
+
+  <input type="submit" value="Save" class="btn btn-outline-primary" />
+}
+
+<div class="flex">
+  @Html.ActionLink("Back to Machines", "Index", "Machines", null, new { @class = "btn btn-outline-dark"})
+  @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-outline-dark"})
+</div>

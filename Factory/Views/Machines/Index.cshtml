@@ -17,4 +17,7 @@
   <li>@Html.ActionLink($"{machine.Name}", "Details", new { id = machine.MachineId })</li>
 }
 
-<p>@Html.ActionLink("Add new machine", "Create")</p>
+<div class="flex">
+  @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-outline-dark"})
+  @Html.ActionLink("Add new Machine", "Create", "Machines", null, new {@class = "btn btn-outline-dark"})
+</div>
