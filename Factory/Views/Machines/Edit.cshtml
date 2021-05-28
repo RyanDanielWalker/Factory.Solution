@@ -12,11 +12,11 @@
 
   @Html.LabelFor(model => model.Name)
   @Html.EditorFor(model => model.Name)
-  @Html.LabelFor(model => model.Operational)
+  @Html.Label("This Machine Operational When Checked")
   @Html.CheckBoxFor(model => model.Operational)
 
   @Html.Label("Select Engineer")
-  @Html.DropDownList("EngineerId")
+  @Html.DropDownList("EngineerId", "-select-")
 
   <input type="submit" value="Save" class="btn btn-outline-primary" />
 }
