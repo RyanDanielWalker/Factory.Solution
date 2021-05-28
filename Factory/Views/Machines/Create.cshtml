@@ -10,6 +10,8 @@
 {
   @Html.LabelFor(model => model.Name)
   @Html.TextBoxFor(model => model.Name, new {required = "required"})
+  @Html.LabelFor(model => model.Operational)
+  @Html.CheckBoxFor(model => model.Operational)
 
   @Html.Label("Select Engineer")
   @Html.DropDownList("EngineerId", "-select-")

@@ -22,7 +22,7 @@ This application will allow Dr. Sillystringz to add Machines, and the Engineers 
     "DefaultConnection": "Server=localhost;Port=3306;database={YOUR_SCHEMA_NAME};uid=root;pwd={YOUR_PASSWORD};"
   }
 }`
-   * Fill in your the name of your schema and your MySQL Workbench password, omitting the curly braces
+   * Fill in the desired name of your schema and your MySQL Workbench password, omitting the curly braces
 
 ### Installation
 1. Clone the repository: `$ git clone https://github.com/RyanDanielWalker/Factory.Solution`
@@ -32,6 +32,7 @@ This application will allow Dr. Sillystringz to add Machines, and the Engineers 
     * Navigate to `Factory.Solution/Factory` in your command line
     * Run the command `dotnet restore` to restore the dependencies that are listed in the .csproj
     * Run the command `dotnet build` to build the project and its dependencies into a set of binaries
+    * Run the command `dotnet ef database update` to create database and populate tables
     * Finally, run the command `dotnet run` to run the project!
     * Note: `dotnet run` also restores and builds the project, so you can use this single command to start the app
     * View the application via your preferred web browser by visiting `localhost:5000/`
