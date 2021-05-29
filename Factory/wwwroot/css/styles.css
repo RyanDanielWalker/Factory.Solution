@@ -3,7 +3,10 @@
   font-family: 'Fugaz One', cursive;
 }
 body {
-  background-color: #8D918D;
+  background-image: url('../img/machine.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 .card {
   margin: auto;
