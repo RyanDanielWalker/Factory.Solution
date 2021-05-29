@@ -39,7 +39,8 @@ This application will allow Dr. Sillystringz to add Machines, and the Engineers 
 
 
 ## Known Bugs
-User able to add same Engineer to Machine an unlimited amount of times.
+* User able to add same Engineer to Machine an unlimited amount of times.
+* If invalid date entered, date defaults to 01/01/0001
 
 ## Technologies Used
 * ASP .NET Core MVC
